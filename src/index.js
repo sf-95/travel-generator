@@ -1,6 +1,6 @@
 function displayTravelActivity(response) {
   console.log("Travel activity generated");
-  new Typewriter("#default-travel-activity", {
+  new Typewriter("#travel-activity", {
     strings: response.data.answer,
     autoStart: true,
     delay: 1,
@@ -18,6 +18,12 @@ function generateTravelActivity(event) {
   let context =
     "You are an adventurous traveler and love to explore. Your mission is to generate 3 travel activities in basic HTML format - the activity only, not explanation. Do not include a header or title. Please do not include any markdown in the response. Ensure each activity is bullet pointed. Sign the travel activity with 'SheCodes AI' inside a <strong> element at the end. Make sure to follow the user instructions.";
   let apiUrl = `https://api.shecodes.io/ai/v1/generate?prompt=${prompt}&context=${context}&key=${apiKey}`;
+
+  let travelActivityElement = document.querySelector("#travel-activity");
+  travelActivityElement.classList.remove("hidden");
+  travelActivityElement.innerHTML = `<div class="generating">
+     ⏳ Generating travel activities about ${instructionsInput.value}
+    </div>`;
 
   console.log("Generating travel activity");
   console.log(`Prompt: ${prompt}`);

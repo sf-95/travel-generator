@@ -14,19 +14,23 @@
         <h1>AI Travel Activity Generator</h1>
       </header>
       <main>
-        <form id="travel-activity-generator-form">
-          <input
-            type="text"
-            placeholder="Enter a travel destination"
-            autofocus
-            required
-            autocomplete="off"
-            class="instructions"
-            id="user-instructions"
-          />
-          <input type="submit" class="submit-button" />
-        </form>
-        <div class="travel-activity" id="default-travel-activity">
+        <div class="form-container">
+          <form id="travel-activity-generator-form">
+            <input
+              type="text"
+              placeholder="Enter a travel destination"
+              autofocus
+              required
+              autocomplete="off"
+              class="instructions"
+              id="user-instructions"
+            />
+            <input type="submit" class="submit-button" />
+          </form>
+          <div class="hint">i.e. United Kingdom</div>
+        </div>
+
+        <div class="travel-activity hidden" id="travel-activity">
           <br />
         </div>
       </main>
