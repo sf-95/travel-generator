@@ -9,6 +9,7 @@ body {
 
 a {
   color: #000000;
+  text-decoration: none;
 }
 
 .container {
@@ -22,7 +23,7 @@ header {
 
 h1 {
   text-align: center;
-  font-weight: 800;
+  font-weight: bold;
   font-size: 48px;
   line-height: 1.5;
   color: #000000d6;
