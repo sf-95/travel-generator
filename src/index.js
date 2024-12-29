@@ -21,7 +21,7 @@ function generateTravelActivity(event) {
   let travelActivityElement = document.querySelector("#travel-activity");
   travelActivityElement.classList.remove("hidden");
   travelActivityElement.innerHTML = `<div class="generating">
-     ⏳ Generating travel activities about ${instructionsInput.value}
+     ⏳ Generating travel activities about <strong>${instructionsInput.value}</strong>
     </div>`;
 
   axios.get(apiUrl).then(displayTravelActivity);
