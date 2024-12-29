@@ -54,13 +54,17 @@ form {
   font-size: 16px;
 }
 
-.travel-destination {
+.travel-activity {
   font-size: 16px;
   background-color: white;
   padding: 20px;
   line-height: 2;
-  border-left: 3px solid;
+  border-left: 3px solid #885df1;
   box-shadow: 0px 20px 60px rgba(39, 33, 66, 0.03);
+}
+
+.travel-activity strong {
+  color: #885df1;
 }
 
 footer {
