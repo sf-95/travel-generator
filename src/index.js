@@ -1,5 +1,4 @@
 function displayTravelActivity(response) {
-  console.log("Travel activity generated");
   new Typewriter("#travel-activity", {
     strings: response.data.answer,
     autoStart: true,
@@ -25,12 +24,7 @@ function generateTravelActivity(event) {
      ⏳ Generating travel activities about ${instructionsInput.value}
     </div>`;
 
-  console.log("Generating travel activity");
-  console.log(`Prompt: ${prompt}`);
-  console.log(`Prompt: ${context}`);
-  // Make a call to the API
   axios.get(apiUrl).then(displayTravelActivity);
-  // Display the generated travel activity
 }
 
 let travelFormElement = document.querySelector(
