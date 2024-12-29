@@ -15,7 +15,7 @@ function generateTravelActivity(event) {
   let apiKey = "0b6f603ed9c47fao8478384e5446bt3f";
   let prompt = `User instructions: Generate a travel activity based on ${instructionsInput.value}`;
   let context =
-    "You are an adventurous traveler and love to explore. Your mission is to generate 3 travel activities in basic HTML format - the activity only, not explanation. Do not include a header or title. Please do not include any markdown in the response. Ensure each activity is bullet pointed. Sign the travel activity with 'SheCodes AI' inside a <strong> element at the end. Make sure to follow the user instructions.";
+    "You are an adventurous traveler and love to explore. Your mission is to generate 3 travel activities in basic HTML format - the activity only, not explanation. Do not include a header or title. Please do not include any markdown in the response. Ensure each activity is bullet pointed. Sign the travel activity with 'SheCodes AI' inside a <strong> element at the end. Make the destinations in font weight 800 and leave the rest of the text as is. Add a relevant emoji at the end of each activity. Make sure to follow the user instructions.";
   let apiUrl = `https://api.shecodes.io/ai/v1/generate?prompt=${prompt}&context=${context}&key=${apiKey}`;
 
   let travelActivityElement = document.querySelector("#travel-activity");
